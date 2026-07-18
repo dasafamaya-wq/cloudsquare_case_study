@@ -3,6 +3,9 @@ Author: Asaf Amaya
 
 Installation Guide: 
 
+Pre Deployment Steps: 
+1. On setup > sharing settings, set the External Access for Account as Public Read Only
+
 One thing you need is to have your VS Code connected to your org before installation. Then you may proceed with one of the following options. 
 
 FIRST Option:
@@ -21,4 +24,5 @@ Post Deployment steps:
 2. Once the site is created, Click on Published Access Settings and perform the following:
      - Grant Read access to the Account. Also grant access to the Federal Tax ID field.
      - Grant Read/Write access to Opportunity. You may need to grant access to the Application Origin field.
-     - Grant Read/Write access to Lead. You may need to grant access to the Application Origin and Federal Tax ID field. 
+     - Grant Read/Write access to Lead. You may need to grant access to the Application Origin and Federal Tax ID field.
+     - Also, grant access to the SubmitApplication and SubmitApplicationHelper apex classes.
