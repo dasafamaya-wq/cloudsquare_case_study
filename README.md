@@ -14,4 +14,11 @@ SECOND OPTION:
 THIRD OPTION: Replace the main folder of your project with the one here on this repository and you may use the manifest to deploy everything included here to the org. 
 
 Post Deployment steps: 
-1. 
+1. Create a site on setup > sites with the following details:
+     - Site Label: Submit Application
+     - Site Name: submitApplication
+     - Active: Checked
+2. Once the site is created, Click on Published Access Settings and perform the following:
+     - Grant Read access to the Account. Also grant access to the Federal Tax ID field.
+     - Grant Read/Write access to Opportunity. You may need to grant access to the Application Origin field.
+     - Grant Read/Write access to Lead. You may need to grant access to the Application Origin and Federal Tax ID field. 
