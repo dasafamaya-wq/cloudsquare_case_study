@@ -26,3 +26,20 @@ Post Deployment steps:
      - Grant Read/Write access to Opportunity. You may need to grant access to the Application Origin field.
      - Grant Read/Write access to Lead. You may need to grant access to the Application Origin and Federal Tax ID field.
      - Also, grant access to the SubmitApplication and SubmitApplicationHelper apex classes.
+
+
+Overall Design 
+ - For Leads Creation, the object will have a field to store the Federal Tax ID in case it's provided by the user.
+ - A global value set was created to store the two possible origins (Community or Webhook) and that is being used by two picklist, one on the lead side and the other one on the opportunity side. In case we need to add more origins we can just add it to the global value set and will be available for both.
+ - The lightning web component may be used on a experience page and will be displaying the fields required and optional. Once the form is populated and the record is created, fields are blank and user can create more records.
+ - As per now, the sharing rule only has the validation when Name is not blank but we can modify and add more rules if needed.
+ - Apex has the String.escapeSingleQuotes for SOQL/SOSL injection.
+
+What's missing?
+- Fields may be added to any page layout or lightning page.
+- Permissions can be granted to any needed profile or Permission sets to the new fields being created
+- No site is included with the LWC
+
+Notes: No chatgpt, no claude, agentforce vibes was used to solved this but Google search. ;) 
+
+Feel free to provide any feedback. We can always learn! :) 
