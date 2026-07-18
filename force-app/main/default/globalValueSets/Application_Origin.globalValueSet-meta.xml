@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Community</fullName>
+        <default>false</default>
+        <label>Community</label>
+    </customValue>
+    <customValue>
+        <fullName>Webhook</fullName>
+        <default>false</default>
+        <label>Webhook</label>
+    </customValue>
+    <description>In order to know where the application is coming from.</description>
+    <masterLabel>Application Origin</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

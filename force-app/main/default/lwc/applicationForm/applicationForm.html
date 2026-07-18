@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Application Form" icon-name="standard:employee_job">
+        <div class="slds-var-m-around_medium">
+            <template lwc:if={isSuccess}>
+                <div class="slds-theme_success slds-var-p-around_medium slds-var-m-bottom_medium">
+                    Application successfully sent to Apex!
+                </div>
+            </template>
+
+            <template lwc:if={error}>
+                <div class="slds-theme_error slds-var-p-around_medium slds-var-m-bottom_medium">
+                    Error: {error}
+                </div>
+            </template>
+
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <!-- Required Fields -->
+                    <lightning-input label="Company Name" data-id="req-field" name="companyName" required></lightning-input>
+                    <lightning-input type="email" label="Email" data-id="req-field" name="email" required></lightning-input>
+                    <lightning-input type="tel" label="Phone" data-id="req-field" name="phone" required></lightning-input>
+                    <lightning-input label="Contact First Name" data-id="req-field" name="contactFirstName" required></lightning-input>
+                    <lightning-input label="Contact Last Name" data-id="req-field" name="contactLastName" required></lightning-input>
+                </div>
+                
+                <div class="slds-col">
+                    <!-- Optional Fields -->
+                    <lightning-input label="Federal Tax ID" name="federalTaxId"></lightning-input>
+                    <lightning-input type="number" label="Annual Revenue" name="annualRevenue"></lightning-input>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="slds-var-m-top_medium slds-align_absolute-center">
+                <lightning-button variant="brand" label="Submit Application" onclick={handleSubmit} disabled={isSaving}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
